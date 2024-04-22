@@ -12,4 +12,10 @@ public class AnswererTest {
 
         assertThat(contents, equalTo("JMB"));
     }
+    @Test
+    public void canAnswerCurrentYear() {
+        var contents = new Answerer().answerFor("What year is it ?");
+
+        assertThat(contents, equalTo("2024"));
+    }
 }
