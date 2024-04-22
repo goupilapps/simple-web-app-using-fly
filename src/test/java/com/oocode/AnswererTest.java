@@ -18,4 +18,11 @@ public class AnswererTest {
 
         assertThat(contents, equalTo("2024"));
     }
+
+    @Test
+    public void canAnswerWithDefault() {
+        var contents = new Answerer().answerFor("This is a bad question");
+
+        assertThat(contents, equalTo("Please add a valid question"));
+    }
 }
